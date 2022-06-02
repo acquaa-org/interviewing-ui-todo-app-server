@@ -53,7 +53,7 @@ app.put('/api/tasks/:id', (req, res) => {
     taskList[index].description = task.description;
   }
 
-  if(task.complete) {
+  if(task.hasOwnProperty('complete')) {
     taskList[index].complete = task.complete;
   }
 
